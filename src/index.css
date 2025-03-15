@@ -125,6 +125,10 @@ header a:hover {
   text-decoration: underline;
 }
 
+.login-icon {
+  width: 40px;
+}
+
 main {
   margin-bottom: 84px;
 }
