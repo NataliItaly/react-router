@@ -11,3 +11,15 @@ nav {
 a {
   margin: 0 20px;
 }
+
+a.active {
+  color: aqua;
+}
+
+a.host-active {
+  color: pink;
+}
+
+a.active-small {
+  color: forestgreen;
+}
