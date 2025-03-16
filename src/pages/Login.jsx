@@ -11,6 +11,9 @@ export default function Login() {
   const [error, setError] = React.useState(null);
 
   const location = useLocation();
+  const from = location.state?.from || "/host";
+
+  const navigate = useNavigate();
   console.log(location);
 
   function handleSubmit(e) {
@@ -21,6 +24,8 @@ export default function Login() {
       .then((data) => {
         console.log(data);
         setError(null);
+        localStorage.setItem("loggedin");
+        navigate(from, { replace: true });
       })
       .catch((er) => setError(er))
       .finally(() => setState("idle"));
