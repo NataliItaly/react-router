@@ -85,7 +85,8 @@ createServer({
   routes() {
     this.namespace = "api";
     this.logging = false;
-    this.timing = 1000;
+    //this.timing = 1000;
+    this.passthrough("https://firestore.googleapis.com/**");
 
     this.get("/vans", (schema, request) => {
       //emulate bad response
